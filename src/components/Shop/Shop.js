@@ -11,18 +11,21 @@ const Shop = () => {
         .then(fakeData=>setProducts(fakeData.slice(0,10)))
         
      } ,[])
-     
+  
     
     return (
-        <div>
-            <h1>this is pad</h1>
-            <h3> user {products.length}</h3>
+        <div className='shop-container'>
+           
+           <div className="product-container">
             <ul>
                 {
                     products.map(products=><li>{products.name}</li>)
                 }
             </ul>
-          
+           </div>
+          <div className="cart-container">
+            <h3>This is card</h3>
+          </div>
         </div>
     );
 };
