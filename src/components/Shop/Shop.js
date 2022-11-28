@@ -12,7 +12,10 @@ const Shop = () => {
         .then(fakeData=>setProducts(fakeData.slice(0,40)))
         
      } ,[])
-  
+     
+     const handelProduct = (products)=>{
+        console.log('shetu', products)
+     }
     
     return (
         <div className='shop-container'>
@@ -20,7 +23,7 @@ const Shop = () => {
            <div className="product-container">
             <ul>
                 {
-                    products.map(pd=><Product products={pd}> </Product>)
+                    products.map(pd=><Product handelProduct={handelProduct} products ={pd}> </Product>)
                 }
             </ul>
            </div>
