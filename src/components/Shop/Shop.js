@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './Shop.css';
 // import fakeData from '../../fakeData';
+import Product from './../Product/Product';
 
 const Shop = () => {
    
      const [products,setProducts]= useState([])
      useEffect(()=>{
-        fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
+        fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON')
         .then(res=>res.json())
-        .then(fakeData=>setProducts(fakeData.slice(0,10)))
+        .then(fakeData=>setProducts(fakeData.slice(0,40)))
         
      } ,[])
   
@@ -19,7 +20,7 @@ const Shop = () => {
            <div className="product-container">
             <ul>
                 {
-                    products.map(products=><li>{products.name}</li>)
+                    products.map(pd=><Product products={pd}> </Product>)
                 }
             </ul>
            </div>
