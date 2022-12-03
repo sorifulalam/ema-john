@@ -36,12 +36,16 @@
     background-color: gainsboro;
     width: 150px;
     height: 30px;
+    cursor: pointer;
     border: 1px solid rgb(12, 12, 12);
     border-radius: 5px;
     color: rgb(231, 55, 187)
+   
+    
 }
 .product-button:hover{
-    background-color: rgb(172, 255, 46);
+    background-color: rgb(32, 34, 28);
     color: brown;
     font-weight: bold;
+   
 }
